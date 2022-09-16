@@ -2,10 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage("Git checkout") {
-            steps{
-                git 'https://github.com/deiveehan/TestDroid.git'
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
+    //                 git 'https://github.com/deiveehan/TestDroid.git'
+
 }
