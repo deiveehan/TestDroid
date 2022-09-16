@@ -10,6 +10,8 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'gradle --version'
+                echo 'Gradle: $GRADLE_HOME'
+                sh 'gradle clean assembleDebug'
             }
         }
         stage('Test') {
