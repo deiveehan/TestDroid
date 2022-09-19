@@ -12,6 +12,9 @@ pipeline {
                 sh 'gradle --version'
                 echo 'Gradle: $GRADLE_HOME'
                 sh 'gradle clean assembleDebug'
+                echo "------ APK build file -----"
+                sh ls 'app/build/outputs/apk/debug'
+                echo "---------------------------"
             }
         }
         stage('Test') {
